@@ -1,0 +1,23 @@
+<form>
+  <div class="input-group">
+    <p>
+      <label for="INITIAL">INITIAL INVESTMENT </label>
+      <input required type="number" name="INITIAL" id="INITIAL" [(ngModel)]="data.initial">
+    </p>
+    <p>
+      <label for="ANNUAL">ANNUAL INVESTMENT </label>
+      <input required type="number" name="ANNUAL" id="ANNUAL" [(ngModel)]="data.annual">
+    </p>
+  </div>
+  <div class="input-group">
+    <p>
+      <label for="EXPECTED">EXPECTED RETURN </label>
+      <input required type="number" name="EXPECTED" id="EXPECTED" [(ngModel)]="data.expected">
+    </p>
+    <p>
+      <label for="DURATION">DURATION</label>
+      <input required type="number" name="DURATION" id="DURATION" [(ngModel)]="data.duration">
+    </p>
+  </div>
+  <button (click)="sendData()">CALCULATE</button>
+</form>

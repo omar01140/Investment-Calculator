@@ -1,0 +1,26 @@
+@if(allData.length < 1){
+  <p class="center">Please enter some values and press "Caluclate"</p>
+}@else {
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Investment Value</th>
+        <th>Interest (Year)</th>
+        <th>Total Interset</th>
+        <th>Invested Capital</th>
+      </tr>
+    </thead>
+  <tbody>
+      @for (Data of allData; track Data.year) {
+        <tr>
+          <td>{{Data.year}}</td>
+          <td>{{Data.valueEndOfYear | currency}}</td>
+          <td>{{Data.interest | currency}}</td>
+          <td>{{Data.totalInterest | currency}}</td>
+          <td>{{Data.totalAmountInvested | currency}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
